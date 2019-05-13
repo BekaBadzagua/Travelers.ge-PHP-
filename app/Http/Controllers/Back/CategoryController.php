@@ -3,18 +3,37 @@
 namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+
+
+use App\Models\Category;
 
 class CategoryController extends Controller
 {
+    //GET
     public function index(){
-        return view('back.category');
+        $data['categories'] = Category::all();
+        return view('back.category',$data);
     }
 
-    public function add(){
+    //POST
+    public function add(Request $request){
 
+        $this->validate($request,['name' => 'required']);
+
+        $categ = new Category;
+        $categ->name = $request->Input('name');
+        $categ->save();
+
+        return redirect($_SERVER['HTTP_REFERER']);
     }
-    public function delete(){
-        
+    
+    public function delete($id){
+        $categ = Category::find($id);
+        $categ->delete();
+
+        return redirect($_SERVER['HTTP_REFERER']);
     }
 }
