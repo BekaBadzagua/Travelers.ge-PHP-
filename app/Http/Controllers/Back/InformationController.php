@@ -10,4 +10,14 @@ class InformationController extends Controller
     public function index(){
         return view('back.info');
     }
+
+    public function add(){
+
+    }
+    public function edit(){
+
+    }
+    public function delete(){
+        
+    }
 }

@@ -10,4 +10,13 @@ class PlaceController extends Controller
     public function index(){
         return view('back.places');
     }
+    public function add(){
+
+    }
+    public function edit(){
+
+    }
+    public function delete(){
+        
+    }
 }

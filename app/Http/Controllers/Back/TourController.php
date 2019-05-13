@@ -10,4 +10,13 @@ class TourController extends Controller
     public function index(){
         return view('back.tours');
     }
+    public function add(){
+
+    }
+    public function edit(){
+
+    }
+    public function delete(){
+        
+    }
 }

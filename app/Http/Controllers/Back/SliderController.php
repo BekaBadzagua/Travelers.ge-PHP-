@@ -10,4 +10,13 @@ class SliderController extends Controller
     public function index(){
         return view('back.slider');
     }
+    public function add(){
+
+    }
+    public function edit(){
+
+    }
+    public function delete(){
+        
+    }
 }

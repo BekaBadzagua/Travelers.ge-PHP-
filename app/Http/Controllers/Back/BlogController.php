@@ -10,4 +10,14 @@ class BlogController extends Controller
     public function index(){
         return view('back.blogs');
     }
+
+    public function add(){
+
+    }
+    public function edit(){
+
+    }
+    public function delete(){
+        
+    }
 }
