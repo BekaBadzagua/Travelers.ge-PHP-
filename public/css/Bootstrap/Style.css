@@ -1,0 +1,195 @@
+
+/* Common */
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    margin:0;
+}
+.clearfix{
+    overflow:auto;
+}
+.right{
+    float:right;
+}.left{
+     float:left;
+ }
+
+.light-red {
+    color: #ef6c57;
+}
+.silver{
+    color:#4D4D4D;
+    font-style:italic;
+}
+.icon-small{
+    font-size:15px
+}
+body {
+    line-height: 1.7;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+p{
+    font-size:16px;
+    color:rgba(0,0,0,0.5);
+}
+a,a:hover,a:visited,a:host,a:active{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* My Buttons */
+.button-red {
+    color: #ef6c57;
+    font-size: 16px;
+    padding: 16px 48px;
+    background-color: inherit;
+    border: 2px solid #ef6c57;
+    transition: 0.3s;
+}
+.button-red:hover{
+    color: #fff;
+    background-color: #ef6c57;
+}
+.button-red2 {
+    color: #fff;
+    font-size: 20px;
+    padding: 16px 48px;
+    background-color: #ef6c57;
+    border: 2px solid #ef6c57;
+    transition: 0.3s;
+}
+.button-red2:hover {
+    color: #000000;
+    background-color: #fff;
+    border: 2px solid #000000;
+}
+
+
+/* Layout */
+
+/*მთავარი ნავიგაცია*/
+.main-nav {
+    width: 1140px;
+    margin: auto;
+}
+
+.nav {
+    margin-top: 12px; /*Font-ის გამო*/
+    padding-left: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav li {
+    font-size: 16px;
+    padding: 0 0 0 10px;
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav a {
+    color: #000000;
+}
+
+/*ლოგო*/
+#logo {
+    width: 160px;
+    padding: 0 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#logo h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+/*მთავარი განყოფილება*/
+.nav-list {
+    width: 690px;
+    padding: 0 0 0 150px;
+    display: inline-block;
+}
+.nav-list a{
+    transition: 0.2s;
+}
+.nav-list a:hover {
+    color: #ef6c57;
+    text-decoration: none;
+}
+
+.nav-list a.active{
+    color:#ef6c57;
+}
+
+
+/*იკონები*/
+.nav-icon-list {
+    width: 160px;
+    padding: 0 15px;
+}
+
+.nav-icon-list li {
+    padding: 0 16px 0 0;
+}
+
+/*მთავარი ნავიგაცია - End*/
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 128px;
+    color: #ffffff;
+    background-color: #333;
+}
+
+footer a{
+    color: #737373;
+    transition:0.3s;
+}
+footer a:hover{
+    color:#fff;
+}
+
+.footer-row1 div {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    width: 30%;
+}
+
+.footer-row1 p {
+    color: #737373;
+}
+
+.footer-row1 div ul {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    margin: 0 10px;
+    width: 40%;
+    list-style-type: none;
+}
+.footer-row1 li{
+    padding:4px 0;
+}
+.footer-row1 a{
+    color:#737373;
+}
+.footer-ul {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-ul li {
+    display: inline-block;
+    padding: 30px;
+
+}
+/*Footer-End*/
