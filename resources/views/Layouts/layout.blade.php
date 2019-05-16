@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="{{ asset('css/Auth.css') }}">
         <link rel="stylesheet" href="{{ asset('css/Contact.css') }}">        
         <link rel="stylesheet" href="{{ asset('css/Post.css') }}">
-
+        <link rel="stylesheet" href="{{ asset('css/Responsive.css') }}">
         
     </head>
     <body>
@@ -30,7 +30,7 @@
         <header>
             <nav class="main-nav">
                 <div id="logo">
-                    <h1><a href="#">Travelers</a></h1>
+                    <h1><a href="{{route("main")}}">Travelers</a></h1>
                 </div>
                 <div class="nav">
                     <ul class="nav-list">
@@ -44,7 +44,7 @@
     
                     <ul class="nav-icon-list right">
                         <li><a href="#"><span class="fa fa-twitter icon-small"></span></a></li>
-                        <li><a href="#"><span class="fa fa-facebook-f icon-small"></span></a></li>
+                        <li><a href="https://www.facebook.com/BlueSky-685628701869638/" target="_blank"><span class="fa fa-facebook-f icon-small"></span></a></li>
                         <li><a href="#"><span class="fa fa-instagram icon-small"></span></a></li>
                     </ul>
                 </div>
@@ -78,7 +78,7 @@
                                 <li><a href="{{route("blogs")}}">Blogs</a></li>
                             </ul>
                             <ul>
-                                <li><a href="{{route("main")}}">Privacy Policy</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
                                 <li><a href="#">Services</a></li>
                                 <li><a href="{{route("about")}}">About Us</a></li>
                                 <li><a href="{{route("contact")}}">Contact Us</a></li>
@@ -95,7 +95,7 @@
                     <ul>
                         <li><a href="#"><span class="fa fa-tripadvisor icon-small"></span></a></li>
                         <li><a href="#"><span class="fa fa-twitter icon-small"></span></a></li>
-                        <li><a href="#"><span class="fa fa-facebook-f icon-small"></span></a></li>
+                        <li><a href="https://www.facebook.com/BlueSky-685628701869638/" target="_blank"><span class="fa fa-facebook-f icon-small"></span></a></li>
                         <li><a href="#"><span class="fa fa-instagram icon-small"></span></a></li>
                     </ul>
                 </div>

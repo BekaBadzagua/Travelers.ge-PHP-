@@ -9,6 +9,11 @@ Route::get('/About', "Front\AboutController@index")->name("about");
 Route::get('/Blogs', "Front\BlogController@index")->name("blogs");
 Route::get('/Contact', "Front\ContactController@index")->name("contact");
 
+
+Route::get('Place/{id}','Front\PlaceController@show')->name("show-place");
+Route::get('Tour/{id}','Front\TourController@show')->name("show-tour");
+Route::get('Blog/{id}','Front\BlogController@show')->name("show-blog");
+
 // Back
 Route::group(['prefix'=>'Admin'], function(){
     // Main
@@ -65,3 +70,7 @@ Route::group(['prefix'=>'Admin'], function(){
     });
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

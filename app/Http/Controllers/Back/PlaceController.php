@@ -12,6 +12,13 @@ use App\Models\Place;
 
 class PlaceController extends Controller
 {
+    //Constructor
+        public function __construct()
+        {
+            $this->middleware('auth');
+        }
+    //Constructor
+    
 // Start: Private Functions
     private function delete_image($id){
         $model = Place::find($id);
@@ -36,11 +43,12 @@ class PlaceController extends Controller
     public function add(Request $request){
         // ვალიდაციები
         $this->validate($request,[
-            'img'=>'required',
             'name' => 'required',
+            'img'=>'required',
             'text' => 'required',
             'category_id' => 'required'
         ]);
+        
         
         // სურათის დამუშავება
         if(Input::hasFile('img')){
@@ -51,7 +59,7 @@ class PlaceController extends Controller
         // ბაზაში ატვირთვა
         $place = new Place;
         $place->category_id = $request->Input('category_id');
-        $place->name = $request->Input('header');
+        $place->name = $request->Input('name');
         $place->text=$request->Input('text');
         $place->img= $file->getClientOriginalName();
         $place->save();
@@ -63,16 +71,15 @@ class PlaceController extends Controller
     public function edit($id, Request $request){
         // ვალიდაციები
         $this->validate($request,[
-            'img'=>'required',
             'name' => 'required',
             'text' => 'required',
             'category_id' => 'required'
         ]);
-        
+
         //იპოვე სლაიდერი id-ით
         $place = Place::find($id);
         $place->category_id = $request->Input('category_id');
-        $place->name = $request->Input('header');
+        $place->name = $request->Input('name');
         $place->text=$request->Input('text');
 
         // სურათის დამუშავება 

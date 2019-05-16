@@ -10,7 +10,7 @@
 
 <section class="places ">
 
-    <div class="filtration-cont">
+    <div class="filtration-cont" style="display:none;">
         <div class="container-center clearfix">
             <form action="" method="" class="right ">
                 <div class="filter-input-cont">
@@ -42,95 +42,47 @@
     <div class="container-center centered">
         <div class="place-cont">
             <!-- WITH SALES -->
-            <div class="medium-img big-img">
-                <img src="images/tests/01-greece.jpg" />
-                <div>
-                    <h3 class="withPrice">
-                        <span>50 Gel</span><span>30 Gel</span><br>
-                        Write Down Your Experience
-                    </h3>
-                </div>
-            </div>
-            <div class="medium-img big-img">
-                <img src="images/tests/02-rome.jpg" />
-                <div>
-                    <h3  class="withPrice">
-                        <span>50 Gel</span><span>30 Gel</span><br>
-                        Explore Asian Mountains
-                    </h3>
-                </div>
-            </div>
+
+            @foreach ($sales as $sale)
+                <a href="{{route('show-tour',['id'=>$sale->id])}}">
+                    <div class="medium-img big-img">
+                        <img src="{{asset('storage/images/tours/'.$sale->img)}}" />
+                        <div>
+                            <h3 class="withPrice">
+                                <span>{{$sale->price}}</span><span>{{$sale->smallprice}}</span><br>
+                                {{$sale->name}}
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+
             
             <hr>
 
 
             <!-- WITH NO SALES -->
-            <div class="medium-img">
-                <img src="images/tests/04-dubai.jpg" />
-                <div>
-                    <h3  class="withPrice">
-                        <span class="no-decoration">50 Gel</span><br>
-                        Safe Trip With Airasia
-                    </h3>
-                </div>
-            </div>
-            <div class="medium-img">
-                <div>
-                    <h3  class="withPrice">
-                        <span class="no-decoration">50 Gel</span><br>
-                        Write Down Your Experience
-                    </h3>
-                </div>
-                <img src="images/tests/05-london.jpg" />
-            </div>
-            <div class="medium-img">
-                <div>
-                    <h3  class="withPrice">
-                        <span class="no-decoration">50 Gel</span><br>
-                        Explore Asian Mountains
-                    </h3>
-                </div>
-                <img src="images/tests/06-australia.jpg" />
-            </div>
-            <div class="medium-img">
-                <img src="images/tests/04-dubai.jpg" />
-                <div>
-                    <h3  class="withPrice">
-                        <span class="no-decoration">50 Gel</span><br>
-                        Safe Trip With Airasia
-                    </h3>
-                </div>
-            </div>
-            <div class="medium-img">
-                <div>
-                    <h3  class="withPrice">
-                        <span class="no-decoration">50 Gel</span><br>
-                        Write Down Your Experience
-                    </h3>
-                </div>
-                <img src="images/tests/05-london.jpg" />
-            </div>
-            <div class="medium-img">
-                <div>
-                    <h3  class="withPrice">
-                        <span class="no-decoration">50 Gel</span><br>
-                        Explore Asian Mountains
-                    </h3>
-                </div>
-                <img src="images/tests/06-australia.jpg" />
-            </div>
-        </div>
+
+
+
+            @foreach ($tours as $tour)
+                <a href="{{route('show-tour',['id'=>$tour->id])}}">
+                    <div class="medium-img">
+                        <img src="{{asset('storage/images/tours/'.$tour->img)}}" />
+                        <div>
+                            <h3 class="withPrice">
+                                <span class="no-decoration">{{$tour->price}}</span><br>
+                                {{$tour->name}}
+                            </h3>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
+
 
         <div class="centered">
-            <ul class="pagination">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-            </ul>            
+            {{ $tours->links() }}
         </div>
-
 
 
     </div>

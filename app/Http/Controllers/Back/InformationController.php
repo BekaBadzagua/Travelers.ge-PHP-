@@ -12,6 +12,13 @@ use App\Models\Information;
 
 class InformationController extends Controller
 {
+//Constructor
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+//Constructor
+
     public function index(){
         $data['informations'] = Information::all();
         return view('back.info',$data);

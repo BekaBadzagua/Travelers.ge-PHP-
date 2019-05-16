@@ -13,6 +13,12 @@ use App\Models\Blog;
 
 class BlogController extends Controller
 {
+//Constructor
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+//Constructor
 // Start: Private Functions
     private function delete_image($id){
         $blog = Blog::find($id);
@@ -61,7 +67,6 @@ class BlogController extends Controller
         // ვალიდაციები
         $this->validate($request,[
             'name'=>'required',
-            'img' => 'required',
             'text' => 'required'
         ]);
 

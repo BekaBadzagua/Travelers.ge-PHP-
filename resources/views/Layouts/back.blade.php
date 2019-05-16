@@ -63,7 +63,7 @@
                         <ul class="nav navbar-nav pull-right">
                             <!-- BEGIN QUICK SIDEBAR TOGGLER -->
                             <li class="dropdown dropdown-quick-sidebar-toggler">
-                                <a href="javascript:;" class="dropdown-toggle" style="margin-top:10px;">
+                                <a href="{{route('main')}}" class="dropdown-toggle" style="margin-top:10px;">
                                     <i class="icon-logout"></i>
                                 </a>
                             </li>

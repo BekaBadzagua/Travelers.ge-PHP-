@@ -12,6 +12,12 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
+//Constructor
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+//Constructor
     //GET
     public function index(){
         $data['categories'] = Category::all();

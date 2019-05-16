@@ -136,6 +136,10 @@
     padding: 80px 0;
 }
 
+.commertials h3:hover{
+    cursor: default;
+}
+
 
 /* მოგზაურთა შეფასებები */
 
@@ -230,7 +234,6 @@
 }
 
 .video-text-cont {
-    width: 660px;
     margin: auto;
     color: #ffffff;
     text-align: center;

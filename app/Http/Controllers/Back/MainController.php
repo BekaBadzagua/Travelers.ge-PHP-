@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
+    //Constructor
+        public function __construct()
+        {
+            $this->middleware('auth');
+        }
+    //Constructor
+    
     public function index(){
         return view('back.main');
     }

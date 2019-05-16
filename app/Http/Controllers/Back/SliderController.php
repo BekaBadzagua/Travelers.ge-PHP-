@@ -14,6 +14,13 @@ use App\Models\Slider;
 
 class SliderController extends Controller
 {
+    //Constructor
+        public function __construct()
+        {
+            $this->middleware('auth');
+        }
+    //Constructor
+    
 // Start: Private Functions
     private function delete_image($id){
         $slider = Slider::find($id);

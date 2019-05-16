@@ -10,7 +10,7 @@
     <img src="images/tests/hero_bg_2.jpg">
     <div>
         <h1>About Company</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae cumque eius modi expedita accusamus alias error totam ab magnam a mollitia magni, distinctio temporibus optio illo sapiente, odio unde natus.
+        <p>{{$about->text}}</p>
         </p>
         
         <ul>
@@ -26,17 +26,17 @@
     <div>
         <img src="images/tests/person_1.jpg">
         <h2>Jean McMiller</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ab quas facilis obcaecati non ea, est odit repellat distinctio incidunt, quia aliquam eveniet quod deleniti impedit sapiente atque tenetur porro?</p>
+        <p>{{$person1->text}}</p>
     </div>
     <div>
         <img src="images/tests/person_2.jpg">
         <h2>Claire Peters</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ab quas facilis obcaecati non ea, est odit repellat distinctio incidunt, quia aliquam eveniet quod deleniti impedit sapiente atque tenetur porro?</p>
+        <p>{{$person2->text}}</p>
     </div>
     <div>
         <img src="images/tests/person_3.jpg">
         <h2>John Sawyer</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ab quas facilis obcaecati non ea, est odit repellat distinctio incidunt, quia aliquam eveniet quod deleniti impedit sapiente atque tenetur porro?</p>
+        <p>{{$person3->text}}</p>
     </div>
 </div>
 

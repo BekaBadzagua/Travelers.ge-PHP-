@@ -12,8 +12,13 @@ use App\Models\Tour;
 
 class TourController extends Controller
 {
+    //Constructor
+        public function __construct()
+        {
+            $this->middleware('auth');
+        }
+    //Constructor
 
-//name img text price smallprice days difficulty map place_id
 
 
 // Start: Private Functions
@@ -51,6 +56,7 @@ class TourController extends Controller
             'place_id' => 'required'
         ]);
         
+
         // სურათის დამუშავება
         if(Input::hasFile('img')){
             $file = Input::file('img');
@@ -63,6 +69,7 @@ class TourController extends Controller
         $tour->img = $request->Input("img");
         $tour->text = $request->Input("text");
         $tour->price = $request->Input("price");
+        $tour->smallprice = $request->Input("smallprice");
         $tour->days = $request->Input("days");
         $tour->difficulty = $request->Input("difficulty");
         $tour->map = $request->Input("map");
@@ -78,7 +85,6 @@ class TourController extends Controller
         // ვალიდაციები
         $this->validate($request,[
             'name'=>'required',
-            'img' => 'required',
             'text' => 'required',
             'price' => 'required',
             'days' => 'required',
@@ -89,9 +95,9 @@ class TourController extends Controller
 
         $tour = Tour::find($id);
         $tour->name = $request->Input("name");
-        $tour->img = $request->Input("img");
         $tour->text = $request->Input("text");
         $tour->price = $request->Input("price");
+        $tour->smallprice = $request->Input("smallprice");
         $tour->days = $request->Input("days");
         $tour->difficulty = $request->Input("difficulty");
         $tour->map = $request->Input("map");
@@ -116,7 +122,7 @@ class TourController extends Controller
 
     public function delete($id){
         $tour = Tour::find($id);
-        delete_image($idd);
+        self::delete_image($id);
 
         $tour->delete();
         return redirect($_SERVER['HTTP_REFERER']);

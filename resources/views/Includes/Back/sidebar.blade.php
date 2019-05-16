@@ -18,42 +18,18 @@
                 </a>
             </li>
             <li class="nav-item  ">
-                <a href="javascript:;" class="nav-link nav-toggle">
+                <a href="{{route("Admin.Tours")}}" class="nav-link nav-toggle">
                     <i class="icon-briefcase"></i>
                     <span class="title">ტურები</span>
                     <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                    <li class="nav-item  ">
-                        <a href="{{route("Admin.Tours")}}" class="nav-link ">
-                            <span class="title">სრულად</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="{{route("Admin")}}" class="nav-link ">
-                            <span class="title">დამატება</span>
-                        </a>
-                    </li>
-                </ul>
+                </a>                
             </li>
             <li class="nav-item  ">
-                <a href="javascript:;" class="nav-link nav-toggle">
+                <a href="{{route("Admin.Category")}}" class="nav-link nav-toggle">
                     <i class="icon-docs"></i>
                     <span class="title">კატეგორიები</span>
                     <span class="arrow"></span>
                 </a>
-                <ul class="sub-menu">
-                    <li class="nav-item  ">
-                        <a href="{{route("Admin.Category")}}" class="nav-link ">
-                            <span class="title">სრულად</span>
-                        </a>
-                    </li>
-                    <li class="nav-item  ">
-                        <a href="{{route("Admin")}}" class="nav-link ">
-                            <span class="title">დამატება</span>
-                        </a>
-                    </li>
-                </ul>
             </li>
 
             <li class="nav-item  ">
@@ -65,23 +41,11 @@
             </li>
 
             <li class="nav-item  ">
-                <a href="javascript:;" class="nav-link nav-toggle">
+                <a href="{{route("Admin.Blogs")}}" class="nav-link nav-toggle">
                     <i class="icon-user"></i>
                     <span class="title">ბლოგი</span>
                     <span class="arrow"></span>
-                </a>
-                <ul class="sub-menu">
-                        <li class="nav-item  ">
-                            <a href="{{route("Admin.Blogs")}}" class="nav-link ">
-                                <span class="title">სრულად</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="{{route("Admin")}}" class="nav-link ">
-                                <span class="title">დამატება</span>
-                            </a>
-                        </li>
-                    </ul>
+                </a>                
             </li>
 
             <li class="nav-item  ">

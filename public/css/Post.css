@@ -7,7 +7,7 @@
 /*div */
 .post{
 	padding:30px;
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,0.6);
 	border-radius: 25px;
 }
 .post h1{
@@ -35,11 +35,9 @@
 }
 .post-text p:nth-child(2){
 	display: inline-block;
-	color:purple;
 }
 .post-text p:last-child{
 	display: inline-block;
-	color:purple;
 }
 .price-div{
 	width: 80%;

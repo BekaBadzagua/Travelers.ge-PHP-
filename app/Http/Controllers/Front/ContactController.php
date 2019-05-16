@@ -11,4 +11,7 @@ class ContactController extends Controller
     {
         return view("Front.contact");
     }
+
+
+    // აქ უნდა დაწეროს მეილზე წერილის გაგზავნი ფუნქცია
 }
